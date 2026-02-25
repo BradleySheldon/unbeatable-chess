@@ -3,6 +3,5 @@ dist/
 *.log
 .DS_Store
 
-# don't commit the engine binary
 engine/stockfish
 engine/stockfish.exe
