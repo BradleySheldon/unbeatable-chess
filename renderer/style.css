@@ -1,0 +1,41 @@
+body { font-family: system-ui, Arial, sans-serif; margin: 0; }
+.app { display: grid; grid-template-columns: 340px 1fr; height: 100vh; }
+.left { padding: 16px; border-right: 1px solid #ddd; overflow: auto; }
+.controls { display: grid; gap: 10px; margin: 12px 0; }
+.statusBox { padding: 10px; background: #f6f6f6; border-radius: 10px; margin-top: 10px; }
+.moves { margin-top: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; }
+
+.boardWrap { display: flex; align-items: center; justify-content: center; }
+.board {
+  width: min(78vh, 78vw);
+  height: min(78vh, 78vw);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);   /* ✅ add this */
+  border: 2px solid #222;
+}
+
+.square{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  font-size: clamp(34px, 6.2vh, 64px);
+  line-height: 1;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.25),
+    0 0 2px rgba(0,0,0,0.55);
+}
+
+.light { background: #eeeed2; }
+.dark  { background: #769656; }
+.selected { outline: 4px solid rgba(255, 200, 0, 0.9); outline-offset: -4px; }
+.hint {
+  box-shadow:
+    inset 0 0 0 6px rgba(255, 215, 0, 0.9),
+    inset 0 0 0 8px rgba(0, 0, 0, 0.12);
+}
+

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Unbeatable Chess</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="left">
+        <h1>Unbeatable Chess</h1>
+
+        <div class="controls">
+          <label>
+            AI Depth:
+            <select id="depth">
+              <option value="4">4 (Easy)</option>
+              <option value="8">8 (Medium)</option>
+              <option value="12">12 (Hard)</option>
+              <option value="16" selected>16 (Very strong)</option>
+              <option value="20">20 (Brutal)</option>
+            </select>
+          </label>
+
+          <button id="newGame">New Game</button>
+          <button id="flip">Flip Board</button>
+        </div>
+
+        <div class="statusBox">
+          <div><b>Engine:</b> <span id="enginePath">...</span></div>
+          <div><b>Status:</b> <span id="status">...</span></div>
+        </div>
+
+        <pre id="moves" class="moves"></pre>
+      </div>
+
+      <div class="boardWrap">
+        <div id="board" class="board"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./renderer.js"></script>
+  </body>
+</html>
